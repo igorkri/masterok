@@ -17,7 +17,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\CustomersSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Добавление битовой техники';
+$this->title = 'Главная бытовой техники';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -26,17 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="customer-record-index">
 
-    <h1 style = "
-                text-align: center;
-                border-bottom: 2px solid #a6a6a6;
-                width: 28%;
-                margin: 15px auto;
-                padding: 8px 1px;
-                color: grey;
-                font-size: 22px;
-                "><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <p>
         <?= Html::a('Добавить бытовую техники', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
@@ -86,37 +76,37 @@ $this->params['breadcrumbs'][] = $this->title;
 //                    return Html::a('Позвонить', ['tel:', $data->phone]);
 //                 },
 //             ],
-            [
-                'label'=>'Гар',
-                'attribute'=>'guarantee',
-                'options' => ['width' => '10'],
-            ],
+//            [
+//                'label'=>'Гар',
+//                'attribute'=>'guarantee',
+//                'options' => ['width' => '10'],
+//            ],
 //            'sn_model',
 //            [
 //                'attribute'=>'repairs',
 //                'options' => ['width' => '400'],
 //            ],
-            [
-                'label' => 'Матер.',
-                'attribute'=>'material_price',
-                'options' => ['width' => '50'],
-
-            ],
-            [
-                'attribute'=>'price',
-                'options' => ['width' => '80'],
-            ],
+//            [
+//                'label' => 'Матер.',
+//                'attribute'=>'material_price',
+//                'options' => ['width' => '50'],
+//
+//            ],
+//            [
+//                'attribute'=>'price',
+//                'options' => ['width' => '80'],
+//            ],
                         
             
-            [
-                'label' => 'Работа.',
-                'attribute'=>'repairs_price',
-                'options' => ['width' => '50'],
-                'value' => function($data){
-                    $result = $data->price - $data->material_price;
-                    return $result;
-                }
-            ],
+//            [
+//                'label' => 'Работа.',
+//                'attribute'=>'repairs_price',
+//                'options' => ['width' => '50'],
+//                'value' => function($data){
+//                    $result = $data->price - $data->material_price;
+//                    return $result;
+//                }
+//            ],
             [
                 'attribute' => 'status',
                 'options' => ['width' => '20'],
