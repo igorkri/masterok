@@ -32,9 +32,9 @@
                 'items' => [
 
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Главная админ', 'icon' => 'dashboard', 'url' => ['/admin/']],
-                    ['label' => 'Страницы пользователя', 'icon' => 'dashboard', 'url' => ['/admin/services']],
-                    ['label' => 'Бытовая техника', 'url' => ['/admin/customer']],
+                    ['label' => 'Главная админ', 'icon' => 'angellist', 'url' => ['/admin/']],
+                    ['label' => 'Страницы сайта', 'icon' => 'bullhorn', 'url' => ['/admin/services']],
+//                    ['label' => 'Бытовая техника', 'icon' => 'barcode', 'url' => ['/admin/customer']],
 
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
