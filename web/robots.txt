@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin
+
+Host: https://masterok.pl.ua
+Sitemap: https://masterok.pl.ua/sitemap.xml
