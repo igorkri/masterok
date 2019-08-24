@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?php Pjax::begin(); ?>
-    
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -48,25 +48,25 @@ $this->params['breadcrumbs'][] = $this->title;
 //                'value' => function($model){
 //                    return Html::a($model->phone,['update']);
 //                },
-// 
+//
 //            ],
             [
                 'attribute'=>'created_at',
-                'options' => ['width' => '120'],
+                'options' => ['width' => '160'],
 //                'format' =>  ['date', 'php:d.M'],
             ],
             [
                 'label' => 'Акт',
                 'attribute'=>'akt',
-                'options' => ['width' => '60'],
+                'options' => ['width' => '80'],
             ],
             [
                 'attribute'=>'appliances',
-                'options' => ['width' => '350'],
+                'options' => ['width' => '450'],
             ],
             [
                 'attribute'=>'phone',
-                'options' => ['width' => '150'],
+                'options' => ['width' => '250'],
             ],
 //            [
 //           'label'=>'bla',
@@ -96,8 +96,8 @@ $this->params['breadcrumbs'][] = $this->title;
 //                'attribute'=>'price',
 //                'options' => ['width' => '80'],
 //            ],
-                        
-            
+
+
 //            [
 //                'label' => 'Работа.',
 //                'attribute'=>'repairs_price',
