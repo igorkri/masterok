@@ -12,3 +12,4 @@ composer.phar
 /config/db.php
 /config/params.php
 /config/web.php
+/dump
