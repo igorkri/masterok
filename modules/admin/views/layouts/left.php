@@ -34,7 +34,9 @@
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
                     ['label' => 'Главная админ', 'icon' => 'angellist', 'url' => ['/admin/']],
                     ['label' => 'Страницы сайта', 'icon' => 'bullhorn', 'url' => ['/admin/services']],
-//                    ['label' => 'Бытовая техника', 'icon' => 'barcode', 'url' => ['/admin/customer']],
+                    ['label' => 'Категории-shop', 'icon' => 'barcode', 'url' => ['/admin/category']],
+                    ['label' => 'Продукты-shop', 'icon' => 'barcode', 'url' => ['/admin/product']],
+                    
 
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
