@@ -12,12 +12,29 @@ Do not remove the back-link in this web template
 /* Reset
 ---------------------------------*/
 
+/*
+.form-width50{
+    width: 50%;
+    margin-right: 40px;
+    float: left;
+}
+
+.form-width20{
+    width: 20%;
+    margin-right: 40px;
+    float: left;
+}
+
+.form-h{
+    padding: 50px;
+}*/
+
 .table-striped > tbody > tr:nth-of-type(odd) {
     background-color: #e2e1e1;
 }
 
 label{
-    color: #c5c5c5;
+    color: #3e3e3e;
     /*float: left;*/
 }
 

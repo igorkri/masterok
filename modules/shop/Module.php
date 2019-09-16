@@ -9,7 +9,13 @@ class Module extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
+     * 
+     * 
      */
+    
+    //public $layout = '/';
+    public $layout = '@app/modules/shop/views/layouts/main.php';
+    
     public $controllerNamespace = 'app\modules\shop\controllers';
 
     /**

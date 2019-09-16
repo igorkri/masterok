@@ -34,8 +34,8 @@
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
                     ['label' => 'Главная админ', 'icon' => 'angellist', 'url' => ['/admin/']],
                     ['label' => 'Страницы сайта', 'icon' => 'bullhorn', 'url' => ['/admin/services']],
-                    ['label' => 'Категории-shop', 'icon' => 'barcode', 'url' => ['/admin/category']],
-                    ['label' => 'Продукты-shop', 'icon' => 'barcode', 'url' => ['/admin/product']],
+                    ['label' => 'Категории-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/category']],
+                    ['label' => 'Продукты-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/product']],
                     
 
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
