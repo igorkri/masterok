@@ -818,6 +818,7 @@ ol {
 	display: block;
 }
 
+.product-item .tag-hit,
 .product-item .tag-new,
 .product-item .tag-sale {
 	position: absolute;
@@ -839,6 +840,15 @@ ol {
 	padding: 5px 0px 1px;
 	min-width: 65px;
 	background: #f51167;
+        margin-top: 40px;
+}
+
+.product-item .tag-hit {
+    text-align: center;
+    padding: 5px 0px 2px;
+    min-width: 45px;
+    background: #f51111;
+    margin-top: 20px;
 }
 
 .product-item .pi-links {

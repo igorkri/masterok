@@ -1,4 +1,5 @@
 <!-- Hero section -->
+
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
 			<div class="hs-item set-bg" data-setbg="/img/img_shop/bg.jpg">
@@ -81,92 +82,56 @@
 
 
 	<!-- letest product section -->
-	<section class="top-letest-product-section">
+       <?php if(!empty($sliders)): ?>
+       <section class="top-letest-product-section">
 		<div class="container">
 			<div class="section-title">
 				<h2>LATEST PRODUCTS</h2>
 			</div>
 			<div class="product-slider owl-carousel">
+                            <?php foreach ($sliders as $slider): ?>
 				<div class="product-item">
-					<div class="pi-pic">
-						<img src="/img/img_shop/product/1.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top </p>
-					</div>
+                                    <div class="pi-pic">
+                                        
+                                        <?php if($slider['new']): ?>
+                                            <div class="tag-new">New</div>
+                                        <?php endif; ?>
+
+                                        <?php if($slider['sale']): ?>
+                                            <div class="tag-sale">SALE</div>
+                                        <?php endif; ?>
+
+                                        <?php if($slider['hit']): ?>
+                                            <div class="tag-hit">Hit</div>
+                                        <?php endif; ?>
+                                        
+                                        <?= yii\helpers\Html::img("@web/img/img_shop/product/{$slider['img']}", ['alt'=> $slider['name']]) ?>
+						
+                                        <div class="pi-links">
+                                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="pi-text">
+                                        <h6><?= $slider['price'] ?>грн</h6>
+                                        <p><?=$slider['name']?></p>
+                                    </div>
 				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<div class="tag-new">New</div>
-						<img src="/img/img_shop/product/2.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Black and White Stripes Dress</p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="/img/img_shop/product/3.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top </p>
-					</div>
-				</div>
-				<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/4.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/6.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
+                            <?php endforeach;?>
 			</div>
 		</div>
 	</section>
+        <?php endif; ?>
 	<!-- letest product section end -->
-
-
-
+   
+    <?php if(!empty($hits)): ?>
 	<!-- Product filter section -->
 	<section class="product-filter-section">
 		<div class="container">
 			<div class="section-title">
 				<h2>BROWSE TOP SELLING PRODUCTS</h2>
 			</div>
-			<ul class="product-filter-menu">
+<!--			<ul class="product-filter-menu">
 				<li><a href="#">TOPS</a></li>
 				<li><a href="#">JUMPSUITS</a></li>
 				<li><a href="#">LINGERIE</a></li>
@@ -175,137 +140,49 @@
 				<li><a href="#">COATS</a></li>
 				<li><a href="#">JUMPERS</a></li>
 				<li><a href="#">LEGGINGS</a></li>
-			</ul>
-			<div class="row">
+			</ul>-->
+                        <div class="row">
+                            <?php foreach ($hits as $hit): ?>
+			
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="/img/img_shop/product/5.jpg" alt="">
+                                                 <?php if($hit['new']): ?>
+                                                    <div class="tag-new">New</div>
+                                                <?php endif; ?>
+
+                                                <?php if($hit['sale']): ?>
+                                                    <div class="tag-sale">SALE</div>
+                                                <?php endif; ?>
+
+                                                <?php if($hit['hit']): ?>
+                                                    <div class="tag-hit">Hit</div>
+                                                <?php endif; ?>
+                                                
+                                                <?= yii\helpers\Html::img("@web/img/img_shop/product/{$hit['img']}", ['alt'=> $hit['name']]) ?>
+						
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
 							</div>
 						</div>
 						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
+                                                    <h6><?= $hit['price'] ?>грн</h6>
+                                                    <p><?=$hit['name']?></p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<div class="tag-sale">ON SALE</div>
-							<img src="/img/img_shop/product/6.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Black and White Stripes Dress</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/7.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/8.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/9.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/10.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Black and White Stripes Dress</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/11.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/12.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-			</div>
+			
+			
+                            <?php endforeach; ?>
+                        </div>
 			<div class="text-center pt-5">
 				<button class="site-btn sb-line sb-dark">LOAD MORE</button>
 			</div>
 		</div>
 	</section>
 	<!-- Product filter section end -->
-
+        <?php endif;?>
 
 	<!-- Banner section -->
 	<section class="banner-section">

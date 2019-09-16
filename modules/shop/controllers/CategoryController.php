@@ -11,11 +11,13 @@ class CategoryController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        $hits = Products::find()->where(['hit' => '1'])->limit(6)->all();
+//        $hits = Products::find()->where(['hit' => '1'])->asArray()->all();
+        $hits = Products::find()->all();
+        $sliders = Products::find()->where(['hit' => '1'])->limit(5)->asArray()->all();
         
 //        debug($hits);
         
-        return $this->render('index');
+        return $this->render('index', compact('hits', 'sliders'));
     }
 
 }

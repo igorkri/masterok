@@ -41,6 +41,7 @@ class Products extends \yii\db\ActiveRecord
             [['name'], 'required'],
             [['sku', 'content', 'hit', 'new', 'sale'], 'string'],
             [['price', 'price_sale'], 'number'],
+            [['img'],'default', 'value' => 'no-image.png'],
             [['sku', 'name', 'keywords', 'description', 'img'], 'string', 'max' => 255],
         ];
     }
