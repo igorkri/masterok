@@ -2,7 +2,7 @@
 
 namespace app\components;
 use yii\base\Widget;
-use app\models\shop\models\Categories;
+use app\models\shop\models\Category;
 use Yii;
 
 class MenuWidget extends Widget{
@@ -25,7 +25,7 @@ class MenuWidget extends Widget{
         $menu = Yii::$app->cache->get('menu');
         if($menu) return $menu;
 
-        $this->data = Categories::find()->indexBy('id')->asArray()->all();
+        $this->data = Category::find()->indexBy('id')->asArray()->all();
         $this->tree = $this->getTree();
         $this->menuHtml = $this->getMenuHtml($this->tree);
         // set cache

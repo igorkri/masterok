@@ -1,3 +1,4 @@
+<ul class="category-menu">
 <li>
     <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $category['id']]) ?>">
         <?= $category['name']?>
@@ -6,8 +7,9 @@
         <?php endif;?>
     </a>
     <?php if( isset($category['childs']) ): ?>
-        <ul>
+        <ul class="sub-menu">
             <?= $this->getMenuHtml($category['childs'])?>
         </ul>
     <?php endif;?>
 </li>
+</ul>

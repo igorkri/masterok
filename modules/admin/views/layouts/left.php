@@ -31,13 +31,26 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
 
-                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
+                    [
+                        'label' => 'SHOP', 
+//                        'options' => ['class' => 'header'],
+                        'icon' => 'share',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => 'Категории-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/categories']],
+                            ['label' => 'Продукты-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/products']],
+                            ['label' => 'Теги-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/tags']],
+                            ['label' => 'Атрибуты-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/attributes']],
+                            ['label' => 'Значения-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/values']],
+                            ['label' => 'Product Tags', 'url' => ['/admin/shop/products-tags']],
+                        ]
+                    ],
+                        
+
                     ['label' => 'Главная админ', 'icon' => 'angellist', 'url' => ['/admin/']],
                     ['label' => 'Страницы сайта', 'icon' => 'bullhorn', 'url' => ['/admin/services']],
-                    ['label' => 'Категории-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/category']],
-                    ['label' => 'Продукты-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/product']],
+                            
                     
-
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
