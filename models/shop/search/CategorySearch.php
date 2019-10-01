@@ -5,7 +5,6 @@ namespace app\models\shop\search;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\shop\models\Category;
-use yii\db\Expression;
 
 /**
  * CategorySearch represents the model behind the search form of `app\models\shop\models\Category`.
@@ -41,12 +40,7 @@ class CategorySearch extends Category
      */
     public function search($params)
     {
-//        $query = Category::find();
-         $query = Category::find()
-            ->select(['{{%category}}.*', 'products_count' => new Expression('COUNT({{%product}}.id)')])
-            ->joinWith(['products'], false)
-            ->groupBy('{{%category}}.id')
-            ->with(['parent']);
+        $query = Category::find();
 
         // add conditions that should always apply here
 

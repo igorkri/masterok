@@ -4,7 +4,7 @@ namespace app\modules\shop\controllers;
 
 use app\models\shop\models\Category;
 use app\models\shop\models\Product;
-use app\models\shop\models\Brends;
+use app\models\shop\models\Brend;
 use Yii;
 
 
@@ -12,14 +12,16 @@ class CategoryController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-//        $hits = Products::find()->where(['hit' => '1'])->asArray()->all();
         $categories = Product::find()->all();
-//        $hits = Product::find()->where(['hit' => '1'])->limit(5)->asArray()->all();
-//        $brends = Brends::find()->select('name')->asArray()->all();
+        $brends = Brend::find()->select('name')->asArray()->all();
         
-//        debug($hits);
+//      $count = Product::find()->where(['parent_bred_id' => 'id'])->all();
         
-        return $this->render('index', compact('categories'));
+//        $query1 = Product::find()->where(['parent_bred_id' => 'id'])->joinWith(['brend'])->groupBy('id')->count();
+        
+//        debug($query1);
+        
+        return $this->render('index', compact('categories', 'brends'));
     }
 
 }

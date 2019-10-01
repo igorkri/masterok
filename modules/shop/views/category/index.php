@@ -9,8 +9,8 @@
 		</div>
 	</div>-->
 	<!-- Page info end -->
-
-
+    
+        
 	<!-- Category section -->
         <?php if(!empty($categories)): ?>
 	<section class="category-section spad">
@@ -26,39 +26,43 @@
 					</div>
 								
 					<div class="filter-widget">
-						<h2 class="fw-title">Производитель</h2>
+						<h2 class="fw-title">Производитель (Бренды)</h2>
 						<ul class="category-menu">
-                                                    <?php // foreach ($brends as $brend): ?>
-                                                    <?php // debug($brend) ?>
-                                                    <li><a href="#"><?php // $brend['name'] ?> <span>(<?php // count($brends) ?>)</span></a></li>
+                                                    <?php foreach ($brends as $brend): ?>
+                                                    <?php // debug($brends) ?>
+                                                    <li><a href="#"><?= $brend['name'] ?> <span>(<?= count($brends) ?>)</span></a></li>
 							<!--<li><a href="#">Asos<span>(56)</span></a></li>-->
-                                                    <?php // endforeach; ?>
+                                                    <?php endforeach; ?>
 						</ul>
 					</div>
 				</div>
 
 				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
                                     <div class="row">
+                                       
                                         <?php foreach ($categories as $category):?>
                                         <div class="col-lg-4 col-sm-6">
                                             <div class="product-item">
                                                 <div class="pi-pic">
                                                     <?php // foreach ($hits as $hit):?>
-                                                        <?php // if($hit['new']): ?>
+                                                    
+                                                    <?php // debug($category); ?>
+                                                    
+                                                        <?php if($category['new']): ?>
                                                             <div class="tag-new">New</div>
-                                                        <?php // endif; ?>
+                                                        <?php endif; ?>
 
-                                                        <?php // if($hit['sale']): ?>
+                                                        <?php if($category['sale']): ?>
                                                             <div class="tag-sale">SALE</div>
-                                                        <?php // endif; ?>
+                                                        <?php endif; ?>
 
-                                                        <?php // if($hit['hit']): ?>
+                                                        <?php if($category['hit']): ?>
                                                             <div class="tag-hit">Hit</div>
-                                                        <?php // endif; ?>
+                                                        <?php endif; ?>
                                                     <?php // endforeach;?>
                                                     <!--<img src="./img/product/6.jpg" alt="">-->
-                                                    
-                                                    <?php // yii\helpers\Html::img("@web/img/img_shop/product/{$category['img']}", ['alt'=> $category['name']]) ?>
+                                                    <?php $mainImg = $category->getImage(); ?>
+                                                    <?= yii\helpers\Html::img($mainImg->getUrl(), ['alt'=> $category['name']]) ?>
                                                     
                                                     <div class="pi-links">
                                                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>

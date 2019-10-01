@@ -1,5 +1,8 @@
 <?php
 
+Yii::setAlias('@webroot', __DIR__ . '/../web');
+Yii::setAlias('@web', '/');
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 

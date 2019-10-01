@@ -13,3 +13,4 @@ composer.phar
 /config/params.php
 /config/web.php
 /dump
+/web/upload/

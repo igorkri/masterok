@@ -17,8 +17,6 @@ use Yii;
  */
 class Category extends \yii\db\ActiveRecord
 {
-    
-    public $products_count;
     /**
      * {@inheritdoc}
      */
@@ -75,4 +73,6 @@ class Category extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Product::className(), ['category_id' => 'id']);
     }
+    
+    
 }

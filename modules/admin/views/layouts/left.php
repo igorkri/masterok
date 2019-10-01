@@ -37,12 +37,13 @@
                         'icon' => 'share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'Категории-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/categories']],
-                            ['label' => 'Продукты-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/products']],
-                            ['label' => 'Теги-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/tags']],
-                            ['label' => 'Атрибуты-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/attributes']],
-                            ['label' => 'Значения-shop', 'icon' => 'barcode', 'url' => ['/admin/shop/values']],
+                            ['label' => 'Категории', 'icon' => 'barcode', 'url' => ['/admin/shop/category']],
+                            ['label' => 'Продукты', 'icon' => 'barcode', 'url' => ['/admin/shop/product']],
+                            ['label' => 'Бренд', 'icon' => 'barcode', 'url' => ['/admin/shop/brend']],
+                            ['label' => 'Атрибуты', 'icon' => 'barcode', 'url' => ['/admin/shop/attributes']],
+                            ['label' => 'Значения', 'icon' => 'barcode', 'url' => ['/admin/shop/values']],
                             ['label' => 'Product Tags', 'url' => ['/admin/shop/products-tags']],
+                            ['label' => 'Изображение', 'url' => ['/admin/shop/images']],
                         ]
                     ],
                         

@@ -11,17 +11,14 @@ use app\models\shop\models\Product;
  */
 class ProductSearch extends Product
 {
-    
-    public $tag_id;
-    
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['id', 'category_id', 'tag_id', 'price', 'active'], 'integer'],
-            [['name', 'content'], 'safe'],
+            [['id', 'category_id', 'price', 'active', 'hit', 'sale', 'new', 'status', 'original'], 'integer'],
+            [['sku', 'name', 'content', 'compatible'], 'safe'],
         ];
     }
 
@@ -43,27 +40,12 @@ class ProductSearch extends Product
      */
     public function search($params)
     {
-//        $query = Product::find()->with(['category']);
-        $query = Product::find()->with(['category', 'tags'])->joinWith(['productTags'], false)->groupBy('id');
-//          $query = Product::find()->joinWith('category')->with('tags')->joinWith(['productTags'], false)->groupBy('id');
+        $query = Product::find();
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-//            'sort' => [
-//                'defaultOrder' => ['id' => SORT_DESC],
-//                'attributes' => [
-//                    'id',
-//                    'name',
-//                    'price',
-//                    'active',
-//                    'category_id' => [
-//                        'asc' => ['{{%category}}.name' => SORT_ASC],
-//                        'desc' => ['{{%category}}.name' => SORT_DESC],
-//                    ],
-//                ]
-//            ]
         ]);
 
         $this->load($params);
@@ -80,11 +62,17 @@ class ProductSearch extends Product
             'category_id' => $this->category_id,
             'price' => $this->price,
             'active' => $this->active,
-            '{{%product_tag}}.tag_id' => $this->tag_id,
+            'hit' => $this->hit,
+            'sale' => $this->sale,
+            'new' => $this->new,
+            'status' => $this->status,
+            'original' => $this->original,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'content', $this->content]);
+        $query->andFilterWhere(['like', 'sku', $this->sku])
+            ->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'content', $this->content])
+            ->andFilterWhere(['like', 'compatible', $this->compatible]);
 
         return $dataProvider;
     }
