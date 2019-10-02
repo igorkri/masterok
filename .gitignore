@@ -13,4 +13,8 @@ composer.phar
 /config/params.php
 /config/web.php
 /dump
+<<<<<<< OURS
+/web/upload
+=======
 /web/upload/
+>>>>>>> THEIRS
