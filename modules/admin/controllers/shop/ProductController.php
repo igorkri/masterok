@@ -22,7 +22,7 @@ class ProductController extends Controller
     {
         return [
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => VerbFilter::class,
                 'actions' => [
                     'delete' => ['POST'],
                 ],
@@ -36,15 +36,16 @@ class ProductController extends Controller
      */
     public function actionIndex()
     {
+
         $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         
-//        $images_photos = Product::find()->all();
+        $images_photos = Product::find()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-//            'images_photos' => $images_photos,
+            'images_photos' => $images_photos,
         ]);
     }
 

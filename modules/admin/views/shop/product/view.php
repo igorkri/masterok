@@ -33,7 +33,6 @@ $this->params['breadcrumbs'][] = $model->id;
     <?php
     $img = $model->getImage();
     $gallery = $model->getImages();
-//    debug($model);
     ?>
 
     <?= DetailView::widget([
@@ -59,7 +58,10 @@ $this->params['breadcrumbs'][] = $model->id;
             'new:boolean',
             'status:boolean',
             'original:boolean',
-//            'compatible:ntext',
+            [
+            'attribute' => 'compatible',
+            'format' => 'raw',
+            ],
             [
                 'attribute' => 'image',
                 'label' => 'Главное фото',

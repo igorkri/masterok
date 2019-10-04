@@ -34,14 +34,14 @@ class ShopAsset extends AssetBundle{
      ];
     public $js = [
         
-	'js/jquery.slicknav.min.js',
-	'js/owl.carousel.min.js',
+	    'js/jquery.slicknav.min.js',
+	    'js/owl.carousel.min.js',
         'js/jquery.nicescroll.min.js',
-	'js/jquery.zoom.min.js',
-	'js/jquery-ui.min.js',
+	    'js/jquery.zoom.min.js',
+	    'js/jquery-ui.min.js',
         'js/jquery.cookie.js',
         'js/jquery.accordion.js',
-	'js/main.js',
+    	'js/main.js',
         
     ];
     

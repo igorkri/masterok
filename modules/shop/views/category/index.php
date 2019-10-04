@@ -9,10 +9,10 @@
 		</div>
 	</div>-->
 	<!-- Page info end -->
-    
-        
 	<!-- Category section -->
-        <?php if(!empty($categories)): ?>
+        <?php use yii\helpers\Url;
+
+        if(!empty($categories)): ?>
 	<section class="category-section spad">
 		<div class="container">
 			<div class="row">
@@ -21,18 +21,18 @@
 					<div class="filter-widget">
 						<h2 class="fw-title">Каталог</h2>
 						<!--Вывод меню категорий-->
-                                                <?=\app\components\MenuWidget::widget(['tpl' => 'menu'])?>
+                        <?=\app\components\MenuWidget::widget(['tpl' => 'menu'])?>
                                                 
 					</div>
+
+
 								
 					<div class="filter-widget">
 						<h2 class="fw-title">Производитель (Бренды)</h2>
 						<ul class="category-menu">
-                                                    <?php foreach ($brends as $brend): ?>
-                                                    <?php // debug($brends) ?>
-                                                    <li><a href="#"><?= $brend['name'] ?> <span>(<?= count($brends) ?>)</span></a></li>
-							<!--<li><a href="#">Asos<span>(56)</span></a></li>-->
-                                                    <?php endforeach; ?>
+                            <?php foreach ($brends as $brend): ?>
+                                <li><a href="#"><?= $brend['name'] ?> <span><?php count($brends) ?></span></a></li>
+                            <?php endforeach; ?>
 						</ul>
 					</div>
 				</div>
@@ -62,7 +62,7 @@
                                                     <?php // endforeach;?>
                                                     <!--<img src="./img/product/6.jpg" alt="">-->
                                                     <?php $mainImg = $category->getImage(); ?>
-                                                    <?= yii\helpers\Html::img($mainImg->getUrl(), ['alt'=> $category['name']]) ?>
+                                                    <?= yii\helpers\Html::img($mainImg->getUrl('400x650'), ['alt'=> $category['name']]) ?>
                                                     
                                                     <div class="pi-links">
                                                             <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
@@ -71,7 +71,7 @@
                                                 </div>
                                                 <div class="pi-text">
                                                     <h6><?= $category['price'] ?>грн</h6>
-                                                    <p><?=$category['name']?></p>
+                                                    <p><a href="<?= Url::to(['product/view', 'id' => $category->id]) ?>"> <?=$category['name']?></a></p>
                                                 </div>
                                             </div>
                                         </div>
