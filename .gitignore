@@ -9,3 +9,4 @@ composer.phar
 .DS_Store
 /phpunit.xml
 /.vagrant
+/web/upload/
