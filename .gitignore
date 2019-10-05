@@ -9,12 +9,3 @@ composer.phar
 .DS_Store
 /phpunit.xml
 /.vagrant
-/config/db.php
-/config/params.php
-/config/web.php
-/dump
-<<<<<<< OURS
-/web/upload
-=======
-/web/upload/
->>>>>>> THEIRS

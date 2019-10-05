@@ -17,29 +17,53 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php
-//     $img = $model->getImage();
-    
+//    debug($images_photos);
+     $img = $images_photos->getImage();
+
+
 // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Создать товар', ['create'], ['class' => 'btn btn-success']) ?>  
     </p>
     <?php
-    
-//foreach ($images_photos as $photo){
-//    $mainImg = $photo->getImage();
-//    
-//    echo "<img src='{$mainImg->getUrl('80x80')}'>";
-//    
-////    echo yii\helpers\Html::img($mainImg->getUrl('80x80'), ['alt'=> $photo['name']]);
-//}
-    
-    ?>
-    <?= GridView::widget([
+    echo '<table class="table table-striped">';
+        echo "<tr>";
+            echo "<th>Изображение</th>";
+            echo "<th>Артикул</th>";
+            echo "<th>Название товара</th>";
+            echo "<th>Цена</th>";
+            echo "<th>Действие</th>";
+        echo "</tr>";
+        foreach ($images_photos as $product){
+            $mainImg = $product->getImage();
+
+                echo "<tr>";
+                    echo "<td><img src='{$mainImg->getUrl('80x80')}'></td>";
+                    echo "<td>$product->sku</td>";
+                    echo "<td>$product->name</td>";
+                    echo "<td>$product->price</td>";
+                    echo "<td>
+                                <a href=\"product/view?id=$product->id\" >
+                                    <i class=\"glyphicon glyphicon-eye-open\"></i>
+                                </a>
+                                <a href=\"product/update?id=$product->id\">
+                                    <i class=\"glyphicon glyphicon-pencil\"></i>
+                                </a>
+                                <a href=\"product/delete?id=$product->id\" onclick=\"return confirm('Действительно удалить?')\">
+                                    <i class=\"glyphicon glyphicon-trash\"></i>
+                                </a>
+                                
+                         </td>";
+                echo "</tr>";
+        }
+    echo '</table>';
+   $img = $searchModel->getImage();
+     ?>
+<?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-          
             [
                 'attribute' => 'category_id',
                 'value' => function ($model) {

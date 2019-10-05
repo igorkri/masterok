@@ -95,12 +95,12 @@ class Product extends \yii\db\ActiveRecord
      */
     public function getCategory()
     {
-        return $this->hasOne(Category::className(), ['id' => 'category_id']);
+        return $this->hasOne(Category::class, ['id' => 'category_id']);
     }
     
     public function getBrend()
     {
-        return $this->hasOne(Brend::className(), ['id' => 'parent_bred_id']);
+        return $this->hasOne(Brend::class, ['id' => 'category_id']);
     }
     
     

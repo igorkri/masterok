@@ -1,15 +1,19 @@
 <ul class="category-menu">
-<li>
-    <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $category['id']]) ?>">
-        <?= $category['name']?>
+    <li>
+        <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $category['id']]) ?>">
+            <?= $category['name']?>
+            <?php if( isset($category['childs']) ): ?>
+                <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+            <?php endif;?>
+        </a>
         <?php if( isset($category['childs']) ): ?>
-            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+            <ul class="sub-menu">
+                <li>
+
+                        <?= $this->getMenuHtml($category['childs'])?>
+
+                </li>
+            </ul>
         <?php endif;?>
-    </a>
-    <?php if( isset($category['childs']) ): ?>
-        <ul class="sub-menu">
-            <?= $this->getMenuHtml($category['childs'])?>
-        </ul>
-    <?php endif;?>
-</li>
+    </li>
 </ul>

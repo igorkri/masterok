@@ -60,7 +60,7 @@ class Brend extends \yii\db\ActiveRecord
     
     public function getBrend()
     {
-        return $this->hasOne(Product::className(), ['id' => 'parent_brend_id']);
+        return $this->hasMany(Product::class, ['category_id' => 'id']);
     }
     
     public function upload(){
