@@ -33,7 +33,7 @@ class Category extends \yii\db\ActiveRecord
         return [
             [['name'], 'required'],
             [['parent_id'], 'integer'],
-            [['name'], 'string', 'max' => 255],
+            [['name', 'description'], 'string', 'max' => 255],
             [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['parent_id' => 'id']],
         ];
     }
@@ -45,7 +45,8 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'description' => 'SEO Описание',
+            'name' => 'Название категории',
             'parent_id' => 'Parent ID',
         ];
     }
@@ -55,7 +56,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getParent()
     {
-        return $this->hasOne(Category::className(), ['id' => 'parent_id']);
+        return $this->hasOne(Category::class, ['id' => 'parent_id']);
     }
 
     /**
@@ -63,7 +64,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getCategories()
     {
-        return $this->hasMany(Category::className(), ['parent_id' => 'id']);
+        return $this->hasMany(Category::class, ['parent_id' => 'id']);
     }
 
     /**
@@ -71,7 +72,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getProducts()
     {
-        return $this->hasMany(Product::className(), ['category_id' => 'id']);
+        return $this->hasMany(Product::class, ['category_id' => 'id']);
     }
     
     

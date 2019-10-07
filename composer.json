@@ -19,15 +19,10 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "mihaildev/yii2-ckeditor": "*",
-        "kartik-v/yii2-widget-datetimepicker": "*",
-        "kartik-v/yii2-grid": "@dev",
-        "kartik-v/yii2-widget-activeform": "@dev",
         "kartik-v/yii2-widget-datepicker": "dev-master",
         "kartik-v/yii2-widget-rating": "dev-master",
         "dmstr/yii2-adminlte-asset": "^2.1",
-        "costa-rico/yii2-images": "dev-master",
-        "kartik-v/yii2-widget-select2": "dev-master",
-        "kartik-v/yii2-tree-manager": "@dev"
+        "costa-rico/yii2-images": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

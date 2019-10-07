@@ -13,7 +13,7 @@ namespace app\modules\shop\controllers;
  *
  * @author oem
  */
-class HomeController extends \yii\web\Controller{
+class HomeController extends AppController {
     //put your code here
     
         public function actionIndex()

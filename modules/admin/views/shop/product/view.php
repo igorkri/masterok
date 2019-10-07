@@ -48,6 +48,7 @@ $this->params['breadcrumbs'][] = $model->id;
                 'attribute' => 'parent_bred_id',
                 'value' => ArrayHelper::getValue($model, 'brend.name'),
             ],
+            
             'sku',
             'name',
 //            'content:ntext',

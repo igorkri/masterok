@@ -19,6 +19,8 @@ $data = Category::find()->select(['name', 'id'])->indexBy('id')->column();
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
     
     <?php
         echo $form->field($model, 'parent_id')->dropDownList(Category::find()->select(['name', 'id'])->indexBy('id')->column(), ['prompt' => '-']) 

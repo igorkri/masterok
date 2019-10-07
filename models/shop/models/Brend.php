@@ -58,12 +58,17 @@ class Brend extends \yii\db\ActiveRecord
     }
     
     
-    public function getBrend()
+    public function getProducts()
     {
-        return $this->hasMany(Product::class, ['category_id' => 'id']);
+        return $this->hasOne(Product::class, ['parent_bred_id'  => 'id']);
     }
     
-    public function upload(){
+    public function getCategories()
+    {
+        return $this->hasOne($class, $link);
+    }
+
+        public function upload(){
         if($this->validate()){
             $path = 'upload/store/' . $this->image->baseName . '.' . $this->image->extension;
             $this->image->saveAs($path);

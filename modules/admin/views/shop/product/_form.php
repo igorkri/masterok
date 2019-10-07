@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\models\shop\models\Category;
-use kartik\select2\Select2;
+//use kartik\select2\Select2;
 use app\models\shop\models\Brend;
 use mihaildev\ckeditor\CKEditor;
 
@@ -19,6 +19,7 @@ $data = Category::find()->select(['name', 'id'])->all();
 //debug($data);die();
 
 ?>
+
 
 <p>
         <?= Html::a('Просмотр', ['view', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>

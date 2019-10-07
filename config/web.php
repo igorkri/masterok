@@ -16,7 +16,7 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
-
+        
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '9gJIUl0yn0h_V4NUpPLoSqPWeR9UA4gC',
@@ -85,8 +85,11 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<module:[\wd-]+>/<controller:[\wd-]+>/<action:[\wd-]+>/<id:\d+>/page/<page:\d+>' => '<module>/<controller>/<action>',
+//                '<module:[\wd-]+>/<controller:[\wd-]+>/<action:[\wd-]+>/<id:\d+>' => '<module>/<controller>/<action>',
                 '<module:[\wd-]+>/<controller:[\wd-]+>/<action:[\wd-]+>/<id:\d+>' => '<module>/<controller>/<action>',
                 'category/<id:\d+>' => 'category/view',
+                'search' => 'category/search',
                 'microwave' => 'services/__view',
                 'combine' => 'services/__view',
                 'extract' => 'services/__view',
@@ -119,7 +122,7 @@ $config = [
         
     ],
     
-     'modules' => [
+     'modules' => [        
         'admin' => [
             'class' => 'app\modules\admin\Module',
             'defaultRoute' => 'customer/index'

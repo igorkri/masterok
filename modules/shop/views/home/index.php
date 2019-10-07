@@ -1,322 +1,761 @@
-<!-- Hero section -->
-	<section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg" data-setbg="/img/img_shop/bg.jpg">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-white">
-							<span>New Arrivals</span>
-							<h2>denim jackets</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-							<a href="#" class="site-btn sb-line">DISCOVER</a>
-							<a href="#" class="site-btn sb-white">ADD TO CART</a>
-						</div>
-					</div>
-					<div class="offer-card text-white">
-						<span>from</span>
-						<h2>$29</h2>
-						<p>SHOP NOW</p>
-					</div>
-				</div>
-			</div>
-			<div class="hs-item set-bg" data-setbg="/img/img_shop/bg-2.jpg">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-6 col-lg-7 text-white">
-							<span>New Arrivals</span>
-							<h2>denim jackets</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-							<a href="#" class="site-btn sb-line">DISCOVER</a>
-							<a href="#" class="site-btn sb-white">ADD TO CART</a>
-						</div>
-					</div>
-					<div class="offer-card text-white">
-						<span>from</span>
-						<h2>$29</h2>
-						<p>SHOP NOW</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="slide-num-holder" id="snh-1"></div>
-		</div>
-	</section>
-	<!-- Hero section end -->
-        <ul class="catalog">
-            <?=\app\components\MenuWidget::widget(['tpl' => 'menu'])?>
-        </ul>
-	<!-- Features section -->
-	<section class="features-section">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-4 p-0 feature">
-					<div class="feature-inner">
-						<div class="feature-icon">
-							<img src="/img/img_shop/icons/1.png" alt="#">
-						</div>
-						<h2>Fast Secure Payments</h2>
-					</div>
-				</div>
-				<div class="col-md-4 p-0 feature">
-					<div class="feature-inner">
-						<div class="feature-icon">
-							<img src="/img/img_shop/icons/2.png" alt="#">
-						</div>
-						<h2>Premium Products</h2>
-					</div>
-				</div>
-				<div class="col-md-4 p-0 feature">
-					<div class="feature-inner">
-						<div class="feature-icon">
-							<img src="/img/img_shop/icons/3.png" alt="#">
-						</div>
-						<h2>Free & fast Delivery</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Features section end -->
+<?php
 
+/* @var $this yii\web\View */
 
-	<!-- letest product section -->
-	<section class="top-letest-product-section">
-		<div class="container">
-			<div class="section-title">
-				<h2>LATEST PRODUCTS</h2>
-			</div>
-			<div class="product-slider owl-carousel">
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="/img/img_shop/product/1.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top </p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<div class="tag-new">New</div>
-						<img src="/img/img_shop/product/2.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Black and White Stripes Dress</p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="/img/img_shop/product/3.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top </p>
-					</div>
-				</div>
-				<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/4.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/6.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-			</div>
-		</div>
-	</section>
-	<!-- letest product section end -->
+$this->title = 'My Yii Application';
+?>
+<section id="slider"><!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
 
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <h1><span>E</span>-SHOPPER</h1>
+                                <h2>Free E-Commerce Template</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <button type="button" class="btn btn-default get">Get it now</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
+                                <img src="images/home/pricing.png"  class="pricing" alt="" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1><span>E</span>-SHOPPER</h1>
+                                <h2>100% Responsive Design</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <button type="button" class="btn btn-default get">Get it now</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
+                                <img src="images/home/pricing.png"  class="pricing" alt="" />
+                            </div>
+                        </div>
 
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1><span>E</span>-SHOPPER</h1>
+                                <h2>Free Ecommerce Template</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <button type="button" class="btn btn-default get">Get it now</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
+                                <img src="images/home/pricing.png" class="pricing" alt="" />
+                            </div>
+                        </div>
 
-	<!-- Product filter section -->
-	<section class="product-filter-section">
-		<div class="container">
-			<div class="section-title">
-				<h2>BROWSE TOP SELLING PRODUCTS</h2>
-			</div>
-			<ul class="product-filter-menu">
-				<li><a href="#">TOPS</a></li>
-				<li><a href="#">JUMPSUITS</a></li>
-				<li><a href="#">LINGERIE</a></li>
-				<li><a href="#">JEANS</a></li>
-				<li><a href="#">DRESSES</a></li>
-				<li><a href="#">COATS</a></li>
-				<li><a href="#">JUMPERS</a></li>
-				<li><a href="#">LEGGINGS</a></li>
-			</ul>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/5.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<div class="tag-sale">ON SALE</div>
-							<img src="/img/img_shop/product/6.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Black and White Stripes Dress</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/7.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/8.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/9.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/10.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Black and White Stripes Dress</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/11.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="product-item">
-						<div class="pi-pic">
-							<img src="/img/img_shop/product/12.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="text-center pt-5">
-				<button class="site-btn sb-line sb-dark">LOAD MORE</button>
-			</div>
-		</div>
-	</section>
-	<!-- Product filter section end -->
+                    </div>
 
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
 
-	<!-- Banner section -->
-	<section class="banner-section">
-		<div class="container">
-			<div class="banner set-bg" data-setbg="/img/img_shop/banner-bg.jpg">
-				<div class="tag-new">NEW</div>
-				<span>New Arrivals</span>
-				<h2>STRIPED SHIRTS</h2>
-				<a href="#" class="site-btn">SHOP NOW</a>
-			</div>
-		</div>
-	</section>
-	<!-- Banner section end  -->
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->
 
+<section>
+<div class="container">
+<div class="row">
+<div class="col-sm-3">
+    <div class="left-sidebar">
+        <h2>Category</h2>
+        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Sportswear
+                        </a>
+                    </h4>
+                </div>
+                <div id="sportswear" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Nike </a></li>
+                            <li><a href="#">Under Armour </a></li>
+                            <li><a href="#">Adidas </a></li>
+                            <li><a href="#">Puma</a></li>
+                            <li><a href="#">ASICS </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Mens
+                        </a>
+                    </h4>
+                </div>
+                <div id="mens" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Fendi</a></li>
+                            <li><a href="#">Guess</a></li>
+                            <li><a href="#">Valentino</a></li>
+                            <li><a href="#">Dior</a></li>
+                            <li><a href="#">Versace</a></li>
+                            <li><a href="#">Armani</a></li>
+                            <li><a href="#">Prada</a></li>
+                            <li><a href="#">Dolce and Gabbana</a></li>
+                            <li><a href="#">Chanel</a></li>
+                            <li><a href="#">Gucci</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Womens
+                        </a>
+                    </h4>
+                </div>
+                <div id="womens" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Fendi</a></li>
+                            <li><a href="#">Guess</a></li>
+                            <li><a href="#">Valentino</a></li>
+                            <li><a href="#">Dior</a></li>
+                            <li><a href="#">Versace</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Kids</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Fashion</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Households</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Interiors</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Clothing</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Bags</a></h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="#">Shoes</a></h4>
+                </div>
+            </div>
+        </div><!--/category-products-->
+
+        <div class="brands_products"><!--brands_products-->
+            <h2>Brands</h2>
+            <div class="brands-name">
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
+                    <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
+                    <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
+                    <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
+                    <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
+                    <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
+                    <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+                </ul>
+            </div>
+        </div><!--/brands_products-->
+
+        <div class="price-range"><!--price-range-->
+            <h2>Price Range</h2>
+            <div class="well text-center">
+                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+                <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+            </div>
+        </div><!--/price-range-->
+
+        <div class="shipping text-center"><!--shipping-->
+            <img src="images/home/shipping.jpg" alt="" />
+        </div><!--/shipping-->
+
+    </div>
+</div>
+
+<div class="col-sm-9 padding-right">
+<div class="features_items"><!--features_items-->
+    <h2 class="title text-center">Features Items</h2>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/product1.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>Easy Polo Black Edition</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/product2.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>Easy Polo Black Edition</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/product3.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>Easy Polo Black Edition</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/product4.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>Easy Polo Black Edition</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                </div>
+                <img src="images/home/new.png" class="new" alt="" />
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/product5.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>Easy Polo Black Edition</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                </div>
+                <img src="images/home/sale.png" class="new" alt="" />
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/product6.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+                <div class="product-overlay">
+                    <div class="overlay-content">
+                        <h2>$56</h2>
+                        <p>Easy Polo Black Edition</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="choose">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div><!--features_items-->
+
+<div class="category-tab"><!--category-tab-->
+<div class="col-sm-12">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
+        <li><a href="#blazers" data-toggle="tab">Blazers</a></li>
+        <li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
+        <li><a href="#kids" data-toggle="tab">Kids</a></li>
+        <li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
+    </ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active in" id="tshirt" >
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab-pane fade" id="blazers" >
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab-pane fade" id="sunglass" >
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab-pane fade" id="kids" >
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab-pane fade" id="poloshirt" >
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery2.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery4.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery3.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="product-image-wrapper">
+            <div class="single-products">
+                <div class="productinfo text-center">
+                    <img src="images/home/gallery1.jpg" alt="" />
+                    <h2>$56</h2>
+                    <p>Easy Polo Black Edition</p>
+                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div><!--/category-tab-->
+
+<div class="recommended_items"><!--recommended_items-->
+    <h2 class="title text-center">recommended items</h2>
+
+    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/recommend1.jpg" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/recommend2.jpg" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/recommend3.jpg" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/recommend1.jpg" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/recommend2.jpg" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/recommend3.jpg" alt="" />
+                                <h2>$56</h2>
+                                <p>Easy Polo Black Edition</p>
+                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</div><!--/recommended_items-->
+
+</div>
+</div>
+</div>
+</section>

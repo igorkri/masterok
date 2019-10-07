@@ -59,7 +59,7 @@ class Product extends \yii\db\ActiveRecord
             [['category_id', 'price', 'new_price', 'active', 'hit', 'sale', 'new', 'status', 'original', 'parent_bred_id'], 'integer'],
             [['sku', 'name', 'price'], 'required'],
             [['content', 'compatible'], 'string'],
-            [['sku', 'name'], 'string', 'max' => 255],
+            [['sku', 'name', 'description'], 'string', 'max' => 255],
             [['image'], 'file', 'extensions' => 'png, jpg'],
             [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'id']],
@@ -74,6 +74,7 @@ class Product extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'category_id' => 'Категория',
+            'description' => 'SEO Описание*',
             'sku' => 'Артикул',
             'name' => 'Название',
             'content' => 'Описание',
@@ -100,10 +101,9 @@ class Product extends \yii\db\ActiveRecord
     
     public function getBrend()
     {
-        return $this->hasOne(Brend::class, ['id' => 'category_id']);
+        return $this->hasOne(Brend::class, ['id' => 'parent_bred_id']);
     }
-    
-    
+
       public function upload(){
         if($this->validate()){
             $path = 'upload/store/' . $this->image->baseName . '.' . $this->image->extension;
@@ -130,6 +130,5 @@ class Product extends \yii\db\ActiveRecord
             return false;
         }
     }
-    
-    
+        
 }

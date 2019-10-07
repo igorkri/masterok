@@ -2,232 +2,333 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-//
-//use app\widgets\Alert;
+
 use yii\helpers\Html;
-//use yii\bootstrap\Nav;
-//use yii\bootstrap\NavBar;
-//use yii\widgets\Breadcrumbs;
+
 use app\assets\ShopAsset;
-//use yii\widgets\ActiveForm;
-//use app\models\MailForm;
-//use yii\captcha\Captcha;
-//use mihaildev\ckeditor\CKEditor;
-//use app\models\Services;
+use app\assets\ltAppAsset;
 
 ShopAsset::register($this);
+ltAppAsset::register($this);
 ?>
-<?php $this->beginPage();
-
-?>
-
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="ru-UA">
+<html lang="<?= Yii::$app->language ?>">
 <head>
-    
     <meta charset="<?= Yii::$app->charset ?>">
-        <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-         <?php $this->head() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
 
-	<!-- Favicon -->
-	<link href="/img/favicon.ico" rel="shortcut icon"/>
+    <?php
+//        $this->registerJsFile('js/html5shiv.js', ['position' => \yii\web\View::POS_HEAD, 'condition' => 'lte IE9']);
+//        $this->registerJsFile('js/respond.min.js', ['position' => \yii\web\View::POS_HEAD, 'condition' => 'lte IE9']);
+    ?>
 
-	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
-	<!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
 
-</head>
 <body>
-    <?php $this->beginBody() ?>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+<?php $this->beginBody() ?>
+<header id="header"><!--header-->
+    <div class="header_top"><!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header_top-->
 
-	<!-- Header section -->
-	<header class="header-section">
-		<div class="header-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-2 text-center text-lg-left">
-						<!-- logo -->
-						<a href="./index.html" class="site-logo">
-							<img src="/img/img_shop/logo.png" alt="">
-						</a>
-					</div>
-					<div class="col-xl-6 col-lg-5">
-						<form class="header-search-form">
-							<input type="text" placeholder="Search on divisima ....">
-							<button><i class="flaticon-search"></i></button>
-						</form>
-					</div>
-					<div class="col-xl-4 col-lg-5">
-						<div class="user-panel">
-							<div class="up-item">
-								<i class="flaticon-profile"></i>
-								<a href="#">Sign</a> In or <a href="#">Create Account</a>
-							</div>
-							<div class="up-item">
-								<div class="shopping-card">
-									<i class="flaticon-bag"></i>
-									<span>0</span>
-								</div>
-								<a href="#">Shopping Cart</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<nav class="main-navbar">
-			<div class="container">
-				<!-- menu -->
-				<ul class="main-menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Women</a></li>
-					<li><a href="#">Men</a></li>
-					<li><a href="#">Jewelry
-						<span class="new">New</span>
-					</a></li>
-					<li><a href="#">Shoes</a>
-						<ul class="sub-menu">
-							<li><a href="#">Sneakers</a></li>
-							<li><a href="#">Sandals</a></li>
-							<li><a href="#">Formal Shoes</a></li>
-							<li><a href="#">Boots</a></li>
-							<li><a href="#">Flip Flops</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Pages</a>
-						<ul class="sub-menu">
-							<li><a href="./product.html">Product Page</a></li>
-							<li><a href="./category.html">Category Page</a></li>
-							<li><a href="./cart.html">Cart Page</a></li>
-							<li><a href="./checkout.html">Checkout Page</a></li>
-							<li><a href="./contact.html">Contact Page</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Blog</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-	<!-- Header section end -->
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="<?= \yii\helpers\Url::home()?>"><?= Html::img('@web/images/home/logo.png', ['alt' => 'E-SHOPPER'])?></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                USA
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Canada</a></li>
+                                <li><a href="#">UK</a></li>
+                            </ul>
+                        </div>
 
-        <?=$content;?>        
-        
-<!-- Footer section -->
-	<section class="footer-section">
-		<div class="container">
-			<div class="footer-logo text-center">
-				<a href="index.html"><img src="/img/img_shop/logo-light.png" alt=""></a>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>About</h2>
-						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
-						<img src="/img/img_shop/cards.png" alt="">
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Questions</h2>
-						<ul>
-							<li><a href="">About Us</a></li>
-							<li><a href="">Track Orders</a></li>
-							<li><a href="">Returns</a></li>
-							<li><a href="">Jobs</a></li>
-							<li><a href="">Shipping</a></li>
-							<li><a href="">Blog</a></li>
-						</ul>
-						<ul>
-							<li><a href="">Partners</a></li>
-							<li><a href="">Bloggers</a></li>
-							<li><a href="">Support</a></li>
-							<li><a href="">Terms of Use</a></li>
-							<li><a href="">Press</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget about-widget">
-						<h2>Questions</h2>
-						<div class="fw-latest-post-widget">
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="/img/img_shop/blog-thumbs/1.jpg"></div>
-								<div class="lp-content">
-									<h6>what shoes to wear</h6>
-									<span>Oct 21, 2018</span>
-									<a href="#" class="readmore">Read More</a>
-								</div>
-							</div>
-							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="/img/img_shop/blog-thumbs/2.jpg"></div>
-								<div class="lp-content">
-									<h6>trends this year</h6>
-									<span>Oct 21, 2018</span>
-									<a href="#" class="readmore">Read More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="footer-widget contact-widget">
-						<h2>Questions</h2>
-						<div class="con-info">
-							<span>C.</span>
-							<p>Your Company Ltd </p>
-						</div>
-						<div class="con-info">
-							<span>B.</span>
-							<p>1481 Creekside Lane  Avila Beach, CA 93424, P.O. BOX 68 </p>
-						</div>
-						<div class="con-info">
-							<span>T.</span>
-							<p>+53 345 7953 32453</p>
-						</div>
-						<div class="con-info">
-							<span>E.</span>
-							<p>office@youremail.com</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
-					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
-				</div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                DOLLAR
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Canadian Dollar</a></li>
+                                <li><a href="#">Pound</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                            <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                            <li><a href="#" onclick="return getCart()"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> 
-<p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="shop.html">Products</a></li>
+                                    <li><a href="product-details.html">Product Details</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="blog.html">Blog List</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                        <form method="get" action="<?= \yii\helpers\Url::to(['category/search'])?>">
+                            <input type="text" placeholder="Search" name="q">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header><!--/header-->
 
-			</div>
-		</div>
-	</section>
-	<!-- Footer section end -->
+<?= $content ?>
 
+<footer id="footer"><!--Footer-->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="companyinfo">
+                        <h2><span>e</span>-shopper</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="/images/home/iframe1.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
 
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="/images/home/iframe2.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
 
-	<!--====== Javascripts & Jquery ======-->
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="/images/home/iframe3.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
 
-    <?php $this->endBody() ?>
-    </body>
-    </html>
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <a href="#">
+                                <div class="iframe-img">
+                                    <img src="/images/home/iframe4.png" alt="" />
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle-o"></i>
+                                </div>
+                            </a>
+                            <p>Circle of Hands</p>
+                            <h2>24 DEC 2014</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="address">
+                        <img src="/images/home/map.png" alt="" />
+                        <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Service</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Online Help</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Change Location</a></li>
+                            <li><a href="#">FAQ’s</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Quock Shop</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="#">Mens</a></li>
+                            <li><a href="#">Womens</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Shoes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Policies</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privecy Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Billing System</a></li>
+                            <li><a href="#">Ticket System</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>About Shopper</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Company Information</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Store Location</a></li>
+                            <li><a href="#">Affillate Program</a></li>
+                            <li><a href="#">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="single-widget">
+                        <h2>About Shopper</h2>
+                        <form action="#" class="searchform">
+                            <input type="text" placeholder="Your email address" />
+                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                            <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+            </div>
+        </div>
+    </div>
+
+</footer><!--/Footer-->
+
+<?php
+\yii\bootstrap\Modal::begin([
+    'header' => '<h2>Корзина</h2>',
+    'id' => 'cart',
+    'size' => 'modal-lg',
+    'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+        <a href="' . \yii\helpers\Url::to(['cart/view']) . '" class="btn btn-success">Оформить заказ</a>
+        <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>'
+]);
+
+\yii\bootstrap\Modal::end();
+?>
+
+<?php $this->endBody() ?>
+</body>
+</html>
 <?php $this->endPage() ?>
